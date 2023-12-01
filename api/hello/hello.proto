@@ -3,7 +3,7 @@ syntax = "proto3";
 import "google/api/annotations.proto";
 
 package hello;
-option go_package = "github.com/jiang2084/protos/hello;hello";
+option go_package = "github.com/jiang2084/protos/api/hello;hello";
 
 service Greeter {
   rpc Hello(HelloReply) returns (HelloReply) {
