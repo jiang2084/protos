@@ -11,6 +11,12 @@ service Greeter {
       get: "/hello",
     };
   }
+
+  rpc Ping(PingRequest) returns (PingReply) {
+    option (google.api.http) = {
+      get: "/ping",
+    };
+  }
 }
 
 message HelloRequest {
@@ -19,4 +25,10 @@ message HelloRequest {
 
 message HelloReply {
   string message = 1;
+}
+
+message PingRequest {
+}
+
+message PingReply {
 }

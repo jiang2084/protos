@@ -23,6 +23,18 @@ paths:
                         application/json:
                             schema:
                                 $ref: '#/components/schemas/hello.HelloReply'
+    /ping:
+        get:
+            tags:
+                - Greeter
+            operationId: Greeter_Ping
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/hello.PingReply'
 components:
     schemas:
         hello.HelloReply:
@@ -30,5 +42,8 @@ components:
             properties:
                 message:
                     type: string
+        hello.PingReply:
+            type: object
+            properties: {}
 tags:
     - name: Greeter
